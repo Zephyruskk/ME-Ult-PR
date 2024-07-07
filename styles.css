@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/prototype');
+
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+/* Body styling */
+body {
+    background: linear-gradient(to right, rgba(11,58,90,1), rgba(6,28,52,1));
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 2vw;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header styling */
+header {
+    color: #72d8f1;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border-bottom: 2px solid #247192;
+    font-size: 1rem
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-family: "Prototype", sans-serif;
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+
+main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 57% 43%;
+    flex: 1;
+}
+
+#rankings-panel {
+    flex: 3 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 32px;
+}
+
+#rankings-header {
+    font-family: "Prototype", "sans-serif";
+    display: flex;
+    justify-content: space-between;
+    color: #8bd2ec; 
+    border-bottom: 2px solid #24719c;
+    margin-bottom: 20px;
+    margin-top: 4px;
+}
+
+#rankings-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 8px;
+}
+
+#info-panel {
+    flex: 3 auto;
+    border-left: 2px solid #24719c;    
+}
+
+
+/* Beveled edges */
+/* https://stackoverflow.com/questions/10349867/how-do-i-bevel-the-corners-of-an-element */
+.rank-container {
+    /* height: 128px; */
+    /* width: calc(50% - 10px); */
+    display: grid;
+    grid-template-columns: 35% 65%;
+    color: #ffffff;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #8bd2ec, #8bd2ec) /* top */
+      ,linear-gradient(225deg, #8bd2ec, #8bd2ec) /* right */
+      ,linear-gradient(0deg, #8bd2ec, #8bd2ec) /* bottom */
+      ,linear-gradient(90deg, #8bd2ec, #8bd2ec) /* left */
+      ,linear-gradient(45deg, transparent 9px, #8bd2ec 10px, #8bd2ec 12px, transparent 12px) /* top right */
+      ,linear-gradient(45deg, transparent 9px, #8bd2ec 10px, #8bd2ec 12px, transparent 12px) /* bottom left */
+      ;
+    background-position: top left
+      ,bottom right
+      ,bottom right
+      ,top left
+      ,top right
+      ,bottom left
+      ;
+    background-size: calc(100% - 15px) 2px
+      ,2px calc(100% - 15px)
+      ,calc(100% - 15px) 2px
+      ,2px calc(100% - 15px)
+      ,15px 15px
+      ,15px 15px
+      ;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+    #rankings-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.rank-container:hover {
+    transform: translate3d(5px, -1px, 0px);
+}
+
+.rank-item {
+    height: 96px;
+    position: relative;
+
+}
+
+.rank-item.icon {
+    /* padding: 8px; */
+}
+
+.rank-item .player-panel {
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.player-name {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #24719c;
+    border-top: 0px transparent;
+    border-left: 0px transparent;
+    border-right: 0px transparent;
+    border-style: dashed;
+}
+
+.rank-item + .rank-item {
+    border-left: solid 2px #8bd2ec;
+}
+
+.icon img {
+    /* padding: 0px 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; Ensures the image covers the entire container while maintaining its aspect ratio */
+    max-width: 100%; 
+    height: 100%;
+    padding: 0px 8px;
+    object-fit: contain;
+}
+
+
+.crew {
+    font-family: "Rajdhani", sans-serif;
+    color:#8bd2ec;
+    flex: 1;
+    padding-right: 6px;
+}
+
+.pname {
+    font-family: "Prototype", sans-serif;
+    color:#8bd2ec;
+    flex: 1;
+}
+
+.character-row {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.character-row img{
+    height: 50%;
+    max-width: 50%;
+    object-fit: contain; 
+}
