@@ -88,7 +88,7 @@ main {
     /* height: 128px; */
     /* width: calc(50% - 10px); */
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 1fr 2fr;
     color: #ffffff;
     background-color: transparent;
     background-image: linear-gradient(180deg, #8bd2ec, #8bd2ec) /* top */
@@ -113,7 +113,7 @@ main {
       ,15px 15px
       ;
     background-repeat: no-repeat;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 @media (max-width: 1200px) {
@@ -127,18 +127,32 @@ main {
 }
 
 .rank-item {
+    display: grid;
     height: 96px;
-    position: relative;
-
+    justify-content: center;
+    align-items: center;  
+    /* position: relative; */
 }
 
 .rank-item.icon {
-    /* padding: 8px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rank-item.icon img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .rank-item .player-panel {
-    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 50% 50%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 6px;
+    width: 100%;
 }
 
 .player-name {
@@ -149,25 +163,15 @@ main {
     border-left: 0px transparent;
     border-right: 0px transparent;
     border-style: dashed;
+    padding-bottom: 6px;
+    width: 100%;
 }
 
 .rank-item + .rank-item {
     border-left: solid 2px #8bd2ec;
 }
 
-.icon img {
-    /* padding: 0px 8px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain; Ensures the image covers the entire container while maintaining its aspect ratio */
-    max-width: 100%; 
-    height: 100%;
-    padding: 0px 8px;
-    object-fit: contain;
-}
+
 
 
 .crew {
@@ -175,25 +179,26 @@ main {
     color:#8bd2ec;
     flex: 1;
     padding-right: 6px;
+    font-size: 24pt;
+    line-height: 24pt;
 }
 
 .pname {
     font-family: "Prototype", sans-serif;
     color:#8bd2ec;
     flex: 1;
+    font-size: 24pt;
+    line-height: 24pt;
 }
 
 .character-row {
     display: flex;
-    flex: 1;
-    align-content: center;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    gap: 10px;
 }
 
 .character-row img{
-    height: 50%;
-    max-width: 50%;
-    object-fit: contain; 
+    max-height: 32px;
+    max-width: 32px;
 }
