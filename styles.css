@@ -74,6 +74,7 @@ main {
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
     row-gap: 8px;
+    width: 100%
 }
 
 #info-panel {
@@ -128,6 +129,9 @@ main {
 
 .rank-item {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
     height: 96px;
     justify-content: center;
     align-items: center;  
@@ -146,16 +150,19 @@ main {
 }
 
 .rank-item .player-panel {
-    display: grid;
-    grid-template-rows: 50% 50%;
+    /* display: grid;
+    grid-template-rows: 50% 50%; */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: center;
     row-gap: 6px;
-    width: 100%;
+    width: 75%;
+    margin: 0 auto;
 }
 
-.player-name {
+.dotted-line-div {
     display: flex;
     align-items: center;
     border-bottom: 2px solid #24719c;
@@ -165,30 +172,39 @@ main {
     border-style: dashed;
     padding-bottom: 6px;
     width: 100%;
+    box-sizing: border-box;
+}
+
+.player-name {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .rank-item + .rank-item {
     border-left: solid 2px #8bd2ec;
 }
 
-
-
-
 .crew {
     font-family: "Rajdhani", sans-serif;
     color:#8bd2ec;
     flex: 1;
     padding-right: 6px;
-    font-size: 24pt;
-    line-height: 24pt;
+    font-size: 22pt;
+    line-height: 22pt;
+    width: 100%;
 }
 
 .pname {
     font-family: "Prototype", sans-serif;
     color:#8bd2ec;
     flex: 1;
-    font-size: 24pt;
-    line-height: 24pt;
+    font-size: 22pt;
+    line-height: 22pt;
+    width: 100%
 }
 
 .character-row {
