@@ -206,6 +206,7 @@ main {
 .rank-item.icon img {
     max-width: 100%;
     max-height: 100%;
+    z-index: -1000;
 }
 
 .rank-number {
@@ -320,12 +321,13 @@ main {
     flex: 0;
     position: relative;
     height: 8%;
+    flex-wrap: wrap;
 }
 
 .hm-container {
     align-items: center;
     margin: auto 0;
-    margin-right: 6%;
+    margin-right: 4%;
     display: flex;
     flex-direction: row;
     max-width: 30%;
@@ -350,7 +352,7 @@ main {
     margin-right: 5%;
 }
 
-#ipat-at {
+.ipat-at {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -385,6 +387,12 @@ main {
         font-size: 4vw;
         line-height: 4vw;
     }
+
+
+    #hm {
+        flex-wrap: wrap;
+    }
+
 
     .hm-container .pname {
         font-size: 2vw;
