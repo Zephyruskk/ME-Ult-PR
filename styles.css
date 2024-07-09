@@ -63,6 +63,7 @@ header {
     font-size: 1rem;
     height: 4rem;
     min-height: 3.35vw;
+    max-height: 4vw;
 }
 
 h1 {
@@ -391,6 +392,10 @@ main {
     .hm-container .pname {
         font-size: 2vw;
         line-height: 2vw;
+    }
+
+    .rank-number {
+        font-size: 5.5vw;
     }
 }
 
