@@ -420,14 +420,14 @@ main {
 
 .card-title, .card-subtitle {
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2.6vw;
     font-family: 'Prototype', sans-serif;
     color: #72d8f1;
 }
 
-.card-title {
+/* .card-title {
     margin-top: -0.1vw;
-}
+} */
 
 .card-crew {
     text-align: center;
@@ -435,6 +435,7 @@ main {
     font-family: 'Rajdhani', sans-serif;
     color: #72d8f1;
     margin-right: 0.5vw;
+    margin-top: 0.1vw;
 }
 
 .card-subtitle {
